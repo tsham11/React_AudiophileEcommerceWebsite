@@ -11,7 +11,7 @@ import RootLayout from "./layouts/RootLayout";
 import CategoryLayout from "./layouts/CategoryLayout";
 
 import Home from "./pages/home/Home";
-import List from "./pages/List";
+import List from "./pages/list/List";
 import Product from "./pages/Product";
 import Checkout from "./pages/Checkout";
 

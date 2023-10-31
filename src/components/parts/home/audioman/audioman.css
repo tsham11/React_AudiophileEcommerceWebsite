@@ -1,0 +1,41 @@
+.audioman {
+  width: 1110px;
+  height: 588px;
+  display: flex;
+  gap: 125px;
+}
+
+.audioman img {
+  border-radius: 8px;
+  background: #F1F1F1;
+}
+
+.cont {
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  text-align: start;
+}
+
+.cont h1 {
+  color: #000;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 1.429px;
+  text-transform: uppercase;
+}
+
+.cont h1 span {
+  color: #D87D4A;
+}
+
+.cont p {
+  color: #000;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 25px;
+  opacity: 0.5;
+}
+

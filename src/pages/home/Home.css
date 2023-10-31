@@ -1,51 +1,60 @@
-.homehead{
-    height:632px;
+.homehead {
+    height: 632px;
     background-image: url("../../assets/home/desktop/image-hero.jpg");
     background-repeat: no-repeat;
     background-position: bottom center;
     background-color: #0E0E0E;
     padding-top: 128px;
-        padding-left: 100px;
+    padding-left: 100px;
 }
-.headdiv{
- width: 396px;  
-     height: 360px;
-   
+
+.headdiv {
+    width: 396px;
+    height: 360px;
 }
-.homenewp{
+
+.homenewp {
     color: #FFF;
-        font-size: 14px;
-        font-weight: 400;
-        letter-spacing: 10px;
-        text-transform: uppercase;
-        opacity: 0.4964;
-        padding-bottom:24px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    opacity: 0.4964;
+    padding-bottom: 24px;
 }
-.headdiv h1{
+
+.headdiv h1 {
     color: #FFF;
-        font-size: 56px;
-            font-weight: 700;
-            line-height: 58px;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        padding-bottom: 24px;       
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 58px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding-bottom: 24px;
 }
-.homedesc{
+
+.homedesc {
     color: #FFF;
-        font-size: 15px;
-        font-weight: 500;
-        line-height: 25px;
-        text-align:left;
-        padding-bottom: 40px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 25px;
+    text-align: left;
+    padding-bottom: 40px;
 }
-.headdiv button{
+
+button {
     width: 160px;
-        height: 48px;
-        background: #D87D4A;
-        border:0;
-        color: #FFF;
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
+    height: 48px;
+    background: #D87D4A;
+    border: 0;
+    color: #FFF;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background: #FBAF85;
+    cursor: pointer;
 }

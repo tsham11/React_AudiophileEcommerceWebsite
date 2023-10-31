@@ -1,0 +1,16 @@
+.cat-header {
+  background: #0E0E0E;
+  height: 239px;
+  padding: 98px 0 97px;
+}
+
+.cat-header h1 {
+  color: #FFF;
+  text-align: center;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 1.429px;
+  text-transform: uppercase;
+}
