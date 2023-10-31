@@ -8,7 +8,6 @@ function Home() {
     <div className="home">
       <div className="homehead">
         <div className="headdiv">
-          <p>shkhskjd</p>
           <p className="homenewp">NEW PRODUCT</p>
           <h1>XX99 Mark II Headphones</h1>
           <p className="homedesc">
