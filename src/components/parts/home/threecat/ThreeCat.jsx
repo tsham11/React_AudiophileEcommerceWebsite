@@ -10,9 +10,10 @@ function ThreeCat() {
   return (
     <div className="threecat">
       <div className="p p1">
+        {/* <div className="cat1im pimg"></div> */}
         <img src={p1} className="pimg" />
-        <h3>headphones</h3>
         <span className="alink">
+          <h3>headphones</h3>
           <NavLink to="headphones">
             shop{" "}
             <span>
@@ -23,18 +24,25 @@ function ThreeCat() {
       </div>
 
       <div className="p p2">
+        {/* <div className="cat2im pimg"></div> */}
         <img src={p2} className="pimg" />
-        <h3>speakers lalala</h3>
-        <NavLink to="speakers">
-          shop <img src={arr} />
-        </NavLink>
+        <span className="alink">
+          <h3>speakers</h3>
+          <NavLink to="speakers">
+            shop <img src={arr} />
+          </NavLink>
+        </span>
       </div>
+
       <div className="p p3">
+        {/* <div className="cat3im pimg"></div> */}
         <img src={p3} className="pimg" />
-        <h3>earphones</h3>
-        <NavLink to="earphones">
-          shop <img src={arr} />
-        </NavLink>
+        <span className="alink">
+          <h3>earphones</h3>
+          <NavLink to="earphones">
+            shop <img src={arr} />
+          </NavLink>
+        </span>
       </div>
     </div>
   );

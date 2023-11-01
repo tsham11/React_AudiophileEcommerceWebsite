@@ -1,6 +1,7 @@
 import React from "react";
 import ThreeCat from "../../components/parts/home/threecat/ThreeCat";
 import Audioman from "../../components/parts/home/audioman/Audioman";
+import Homepics from "../../components/parts/home/homepics/Homepics.jsx";
 import "./Home.css";
 
 function Home() {
@@ -8,7 +9,6 @@ function Home() {
     <div className="home">
       <div className="homehead">
         <div className="headdiv">
-          <p>shkhskjd</p>
           <p className="homenewp">NEW PRODUCT</p>
           <h1>XX99 Mark II Headphones</h1>
           <p className="homedesc">
@@ -19,7 +19,7 @@ function Home() {
         </div>
       </div>
       <ThreeCat />
-      <div className="homepics"></div>
+      <Homepics />
       <Audioman />
     </div>
   );
