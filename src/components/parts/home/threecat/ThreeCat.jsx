@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import p1 from "../../../../assets/shared/desktop/image-category-thumbnail-headphones.png";
 import p3 from "../../../../assets/shared/desktop/image-category-thumbnail-earphones.png";
 import p2 from "../../../../assets/shared/desktop/image-category-thumbnail-speakers.png";
