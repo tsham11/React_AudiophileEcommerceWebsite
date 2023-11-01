@@ -1,0 +1,42 @@
+.preview {
+  width: 1110px;
+  height: 560px;
+  display: flex;
+  gap: 125px;
+}
+
+.preview img {
+  border-radius: 8px;
+  background: #F1F1F1;
+}
+
+.info {
+  margin: auto 0;
+  text-align: start;
+}
+
+.np {
+  color: #D87D4A;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 16px 0 32px;
+  color: #000;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 1.429px;
+  text-transform: uppercase;
+}
+
+.pr-desc {
+  margin-bottom: 40px;
+  color: #000;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 25px;
+}

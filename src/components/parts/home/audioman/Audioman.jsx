@@ -1,6 +1,5 @@
 import React from "react";
-import man from "../../../../assets/shared/desktop/image-best-gear.jpg";
-import "./Audioman.css";
+import "./audioman.css";
 
 function Audioman() {
   return (

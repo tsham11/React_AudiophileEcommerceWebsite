@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import ThreeCat from "../../components/parts/home/threecat/ThreeCat";
 import Audioman from "../../components/parts/home/audioman/Audioman";
 import Homepics from "../../components/parts/home/homepics/Homepics.jsx";

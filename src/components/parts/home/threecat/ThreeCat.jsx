@@ -15,7 +15,7 @@ function ThreeCat() {
         <span className="alink">
           <h3>headphones</h3>
           <NavLink to="headphones">
-            shop{" "}
+            shop
             <span>
               <img src={arr} />
             </span>
@@ -26,6 +26,7 @@ function ThreeCat() {
       <div className="p p2">
         {/* <div className="cat2im pimg"></div> */}
         <img src={p2} className="pimg" />
+
         <span className="alink">
           <h3>speakers</h3>
           <NavLink to="speakers">
