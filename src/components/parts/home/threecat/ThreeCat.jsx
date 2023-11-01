@@ -14,8 +14,8 @@ function ThreeCat() {
         <img src={p1} className="pimg" />
         <span className="alink">
           <h3>headphones</h3>
-          <NavLink to="headphones">
-            shop
+          <NavLink to="/headphones">
+            shop&#160; &#160;
             <span>
               <img src={arr} />
             </span>
@@ -29,8 +29,9 @@ function ThreeCat() {
 
         <span className="alink">
           <h3>speakers</h3>
-          <NavLink to="speakers">
-            shop <img src={arr} />
+          <NavLink to="/speakers">
+            shop &#160; &#160;
+            <img src={arr} />
           </NavLink>
         </span>
       </div>
@@ -40,8 +41,9 @@ function ThreeCat() {
         <img src={p3} className="pimg" />
         <span className="alink">
           <h3>earphones</h3>
-          <NavLink to="earphones">
-            shop <img src={arr} />
+          <NavLink to="/earphones">
+            shop &#160; &#160;
+            <img src={arr} />
           </NavLink>
         </span>
       </div>

@@ -71,9 +71,20 @@
 .pr-desc {
   margin-bottom: 40px;
   color: #000;
-  font-size: 15px;
+  font-size: 15px; 
   font-weight: 500;
   line-height: 25px;
+}
+
+.product-list a{
+  color: #FFF;
+   
+}
+.id1 .info{
+  order:1;
+}
+.id1 .listcatim{
+  order:2;
 }
 
 @media (max-width:880px) {
