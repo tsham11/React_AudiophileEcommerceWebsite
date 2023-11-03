@@ -104,6 +104,12 @@
 
 
 }
+@media (max-width:475px) {
+    .nav {
+        padding: 0 24px;
+
+    }
+}
 
 @media (max-width:375px) {
     .linkwrap {

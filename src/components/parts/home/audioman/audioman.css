@@ -76,6 +76,8 @@
     max-width: 573px;
     text-align: center;
     order: 2;
+    padding-left:15px;
+    padding-right:15px;
   }
 
 }

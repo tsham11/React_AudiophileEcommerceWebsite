@@ -69,9 +69,24 @@ color: #FFF;
     background: #000;
     color: #FFF;
 }
+.seep.blb:hover{
+    background: #4C4C4C;
+    cursor: pointer;
+}
 .seep.trb{
     border: 1px solid #000;
     background: transparent;
+    
+}
+.seep.trb a{
+color: #000;
+}
+.seep.trb:hover{
+    background: #000;
+    cursor:pointer;
+}
+.seep.trb:hover a{
+    color:#fff;
 }
 
 .hdiv2 {

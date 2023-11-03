@@ -1,8 +1,6 @@
 import React from "react";
-import p1 from "../../../../assets/home/desktop/image-speaker-zx9.png";
-import p2 from "../../../../assets/home/desktop/image-speaker-zx7.jpg";
-import p3 from "../../../../assets/home/desktop/image-earphones-yx1.jpg";
 import "./Homepics.css";
+import { NavLink } from "react-router-dom";
 
 function Homepics() {
   return (
@@ -15,22 +13,28 @@ function Homepics() {
             Upgrade to premium speakers that are phenomenally built to deliver
             truly remarkable sound.
           </p>
-          <button className="seep blb">see product</button>
+          <button className="seep blb">
+            <NavLink to="/headphones/zx9-speaker">see product</NavLink>
+          </button>
         </div>
       </div>
 
       <div className="hdiv2">
         <div>
           <h2>ZX7 SPEAKER</h2>
-          <button className="seep trb">see product</button>
+          <button className="seep trb">
+            <NavLink to="/headphones/zx7-speaker">see product</NavLink>
+          </button>
         </div>
       </div>
 
       <div className="hdiv3">
         <div className="im"></div>
         <div className="hdiv3d">
-          <h2>ZX7 SPEAKER</h2>
-          <button className="seep trb">see product</button>
+          <h2>YX1 EARPHONES</h2>
+          <button className="seep trb">
+            <NavLink to="/headphones/yx1-earphones">see product</NavLink>
+          </button>
         </div>
       </div>
     </div>

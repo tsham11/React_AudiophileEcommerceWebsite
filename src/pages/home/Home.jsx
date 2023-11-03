@@ -2,6 +2,7 @@
 import ThreeCat from "../../components/parts/home/threecat/ThreeCat";
 import Audioman from "../../components/parts/home/audioman/Audioman";
 import Homepics from "../../components/parts/home/homepics/Homepics.jsx";
+import { NavLink } from "react-router-dom";
 import "./Home.css";
 
 function Home() {
@@ -15,7 +16,11 @@ function Home() {
             Experience natural, lifelike audio and exceptional build quality
             made for the passionate music enthusiast.
           </p>
-          <button>See Product</button>
+          <button>
+            <NavLink to="/headphones/xx99-mark-two-headphones">
+              See Product
+            </NavLink>
+          </button>
         </div>
       </div>
       <ThreeCat />

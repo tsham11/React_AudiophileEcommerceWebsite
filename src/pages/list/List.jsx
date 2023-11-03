@@ -4,14 +4,37 @@ import "./list.css";
 import ThreeCat from "../../components/parts/home/threecat/ThreeCat";
 import Audioman from "../../components/parts/home/audioman/Audioman";
 import productData from "../../../src/data.json";
+import { useEffect, useState } from "react";
 
 function List() {
   const pathname = window.location.pathname;
   const cat = useOutletContext();
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const products = productData
     .filter((product) => product.category === `${cat}`)
     .reverse();
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  let imageSrcKey = "desktop";
+
+  if (windowWidth <= 768) {
+    imageSrcKey = "tablet";
+  }
+  if (windowWidth <= 476) {
+    imageSrcKey = "mobile";
+  }
 
   return (
     <>
@@ -20,53 +43,33 @@ function List() {
           <div className="cat-header">
             <h1>{cat}</h1>
           </div>
+
           <div className="cat-content">
             <div className="product-list">
-              {products.map((product, index) => (
+              {products.map((product) => (
                 <div
                   className={`preview id${Number(product.id) % 2}`}
                   key={product.id}
                 >
-                  {/* {index % 2 === 0 ? ( */}
-                  <>
-                    <img
-                      src={product.categoryImage.desktop}
-                      alt=""
-                      className="listcatim"
-                    />
-                    <div className="info">
-                      {product.new ? <p className="np">NEW PRODUCT</p> : <></>}
-                      <h1 className="title">{product.name}</h1>
-                      <p className="pr-desc">{product.description}</p>
-                      <button>
-                        <NavLink to={product.slug}>See Product</NavLink>
-                      </button>
-                    </div>
-                  </>
-                  {/* ) : (
-                    <>
-                      <div className="info">
-                        {product.new ? (
-                          <p className="np">NEW PRODUCT</p>
-                        ) : (
-                          <></>
-                        )}
-                        <h1 className="title">{product.name}</h1>
-                        <p className="pr-desc">{product.description}</p>
-                        <button>
-                          <NavLink to={product.slug}>See Product</NavLink>
-                        </button>
-                      </div>
-                      <img src={product.categoryImage.desktop} alt="" />
-                    </> )}*/}
+                  <img
+                    src={product.categoryImage[imageSrcKey]}
+                    alt=""
+                    className="listcatim"
+                  />
+                  <div className="info">
+                    {product.new ? <p className="np">NEW PRODUCT</p> : <></>}
+                    <h1 className="title">{product.name}</h1>
+                    <p className="pr-desc">{product.description}</p>
+                    <button>
+                      <NavLink to={product.slug}>See Product</NavLink>
+                    </button>
+                  </div>
                 </div>
               ))}
             </div>
-            <ThreeCat />
-            <Audioman />
           </div>
-          {/* <NavLink to="p1">p1</NavLink>
-          <NavLink to="p2">p2</NavLink> */}
+          <ThreeCat />
+          <Audioman />
         </div>
       ) : (
         <Outlet />
