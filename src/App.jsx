@@ -12,8 +12,8 @@ import CategoryLayout from "./layouts/CategoryLayout";
 
 import Home from "./pages/home/Home";
 import List from "./pages/list/List";
-import Product from "./pages/Product";
-import Checkout from "./pages/Checkout";
+import Product from "./pages/product/Product";
+import Checkout from "./pages/checkout/Checkout";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
