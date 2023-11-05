@@ -1,40 +1,42 @@
-// import React from "react";
+import { useContext } from "react";
+import { MyContext } from "../../layouts/RootLayout";
 import { Outlet, useOutletContext, NavLink } from "react-router-dom";
 import "./list.css";
 import ThreeCat from "../../components/parts/home/threecat/ThreeCat";
 import Audioman from "../../components/parts/home/audioman/Audioman";
 import productData from "../../../src/data.json";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
 function List() {
   const pathname = window.location.pathname;
   const cat = useOutletContext();
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const { imageSrcKey } = useContext(MyContext);
+  // const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const products = productData
     .filter((product) => product.category === `${cat}`)
     .reverse();
 
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setWindowWidth(window.innerWidth);
+  //   };
 
-    window.addEventListener("resize", handleResize);
+  //   window.addEventListener("resize", handleResize);
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize);
+  //   };
+  // }, []);
 
-  let imageSrcKey = "desktop";
+  // let imageSrcKey = "desktop";
 
-  if (windowWidth <= 768) {
-    imageSrcKey = "tablet";
-  }
-  if (windowWidth <= 476) {
-    imageSrcKey = "mobile";
-  }
+  // if (windowWidth <= 768) {
+  //   imageSrcKey = "tablet";
+  // }
+  // if (windowWidth <= 476) {
+  //   imageSrcKey = "mobile";
+  // }
 
   return (
     <>
@@ -48,7 +50,7 @@ function List() {
             <div className="product-list">
               {products.map((product) => (
                 <div
-                  className={`preview id${Number(product.id) % 2}`}
+                  className={`preview id${Number(product.id) % 2} mainwrap`}
                   key={product.id}
                 >
                   <img

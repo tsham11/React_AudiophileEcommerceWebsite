@@ -3,7 +3,7 @@ import "./audioman.css";
 
 function Audioman() {
   return (
-    <div className="audiodiv">
+    <div className="audiodiv mainwrap">
       <div className="audiotext">
         <h1>
           Bringing you the <span>best</span> audio gear

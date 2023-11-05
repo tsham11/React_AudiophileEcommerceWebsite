@@ -1,6 +1,6 @@
 
 .homepics{
-    width: 1110px;
+    /* width: 1110px; */
     display:flex;
     flex-direction: column;
     gap:48px;
@@ -139,10 +139,10 @@ color: #000;
         align-items: flex-start;
 }
 
-@media (max-width:1150px){
+/* @media (max-width:1150px){
     .homepics {
             width: 100%;}
-}
+} */
 
 @media (max-width:830px) {
     .hdiv1 {
@@ -168,9 +168,9 @@ color: #000;
 }
 
 @media (max-width:768px) {
-    .homepics {
+    /* .homepics {
             width: 689px;
-        }
+        } */
 
                 .hdiv2 {
                     background-image: url('../../../../assets/home/tablet/image-speaker-zx7.jpg');       
@@ -190,11 +190,11 @@ color: #000;
                     padding-left: 41px;
                 }
 }
-@media (max-width:689px) {
+/* @media (max-width:689px) {
     .homepics {
         width: 100%;
     }
-}
+} */
 
 @media (max-width:549px) {
     .hdiv3 {
@@ -223,8 +223,8 @@ color: #000;
 }
 
 @media (max-width:375px) {
-    .homepics {
-        width:327px;}
+    /* .homepics {
+        width:327px;} */
 
     .hdiv1im {
             background-image: url('../../../../assets/home/mobile/image-speaker-zx9.png');}

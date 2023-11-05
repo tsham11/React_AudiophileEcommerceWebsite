@@ -109,3 +109,20 @@ button:hover {
         padding-top: 108px;
     }
 }
+
+
+.mainwrap{
+    width:1110px;
+}
+
+@media (max-width:1200px) {
+    .mainwrap {
+        width: 90%;
+    }
+}
+
+@media (max-width:375px) {
+    .mainwrap {
+        width: 327px;
+    }
+}

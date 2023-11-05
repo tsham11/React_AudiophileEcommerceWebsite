@@ -1,13 +1,15 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/shared/desktop/logo.svg";
 import cart from "../../assets/shared/desktop/icon-cart.svg";
 import menu from "../../assets/shared/tablet/icon-hamburger.svg";
 import close from "../../assets/shared/tablet/icon-close.svg";
+import Cart from "../cart/Cart";
 import "./Nav.css";
 
 function Nav() {
   const menuref = useRef(null);
+  const [showcart, setshowcart] = useState(false);
 
   function showmenu() {
     menuref.current.classList.remove("hide");
@@ -50,7 +52,16 @@ function Nav() {
           </div>
         </span>
         <span>
-          <img src={cart} className="cart" />
+          <img
+            src={cart}
+            className="cart"
+            onClick={() => setshowcart(!showcart)}
+          />
+          {showcart ? (
+            <Cart showcart={showcart} setshowcart={setshowcart} />
+          ) : (
+            <></>
+          )}
         </span>
       </div>
     </div>

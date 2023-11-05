@@ -1,7 +1,7 @@
 .threecat{
     display:flex;
     justify-content: space-between;
-    width:1110px;
+    /* width:1110px; */
     height:284px;
     margin:200px auto 168px;
 }
@@ -12,7 +12,7 @@
             background-color: #F1F1F1;
             position:relative;
 }
-.p .cat1im{
+/* .p .cat1im{
     background-image: url('../../../../assets/shared/desktop/image-category-thumbnail-headphones.png');  
 }
 .p .cat2im {
@@ -20,12 +20,13 @@
 }
 .p .cat3im {
     background-image: url('../../../../assets/shared/desktop/image-category-thumbnail-earphones.png');
-}
+} */
 .p .pimg{
     /* background-size: cover;
         background-position: center; */
     transform: translateY(-45%);
-    height:260px;
+    max-height:260px;
+    max-width:70%;
 }
 .p h3{
     padding-bottom:15px;
@@ -54,11 +55,7 @@
     color: #D87D4A;
 }
 
-@media (max-width:1150px) {
-    .threecat {
-        width: 100%;
-    }
-}
+
 @media (max-width:768px) {
     .threecat {
             height: 239px;
@@ -70,7 +67,8 @@
         }
     
         .p .pimg {
-            height: 160px;
+            max-height: 160px;
+            max-width:80%;
         }
     
     
@@ -78,12 +76,12 @@
             bottom: 22px;
         }
 }
-@media (max-width:475px) {
+@media (max-width:565px) {
     .threecat {
         flex-direction: column;
         gap:98px;
         align-items: center;
-            width: 100%;
+            /* width: 97%; */
             height: auto;
             margin: 140px auto 108px;
         }
@@ -92,8 +90,8 @@
             width: 100%;
         }
 }
-@media (max-width:375px) {
+/* @media (max-width:375px) {
     .threecat {
         width: 327px;
     }
-}
+} */

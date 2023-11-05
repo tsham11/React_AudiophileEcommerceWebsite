@@ -8,7 +8,7 @@ import "./ThreeCat.css";
 
 function ThreeCat() {
   return (
-    <div className="threecat">
+    <div className="threecat mainwrap">
       <div className="p p1">
         {/* <div className="cat1im pimg"></div> */}
         <img src={p1} className="pimg" />

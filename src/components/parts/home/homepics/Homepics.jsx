@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 function Homepics() {
   return (
-    <div className="homepics">
+    <div className="homepics mainwrap">
       <div className="hdiv1">
         <div className="hdiv1im"></div>
         <div className="hdivtext">
