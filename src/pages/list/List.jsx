@@ -5,38 +5,15 @@ import "./list.css";
 import ThreeCat from "../../components/parts/home/threecat/ThreeCat";
 import Audioman from "../../components/parts/home/audioman/Audioman";
 import productData from "../../../src/data.json";
-// import { useEffect, useState } from "react";
 
 function List() {
   const pathname = window.location.pathname;
   const cat = useOutletContext();
   const { imageSrcKey } = useContext(MyContext);
-  // const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const products = productData
     .filter((product) => product.category === `${cat}`)
     .reverse();
-
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     setWindowWidth(window.innerWidth);
-  //   };
-
-  //   window.addEventListener("resize", handleResize);
-
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //   };
-  // }, []);
-
-  // let imageSrcKey = "desktop";
-
-  // if (windowWidth <= 768) {
-  //   imageSrcKey = "tablet";
-  // }
-  // if (windowWidth <= 476) {
-  //   imageSrcKey = "mobile";
-  // }
 
   return (
     <>
@@ -62,9 +39,9 @@ function List() {
                     {product.new ? <p className="np">NEW PRODUCT</p> : <></>}
                     <h1 className="title">{product.name}</h1>
                     <p className="pr-desc">{product.description}</p>
-                    <button>
-                      <NavLink to={product.slug}>See Product</NavLink>
-                    </button>
+                    <NavLink to={product.slug}>
+                      <button>See Product</button>
+                    </NavLink>
                   </div>
                 </div>
               ))}

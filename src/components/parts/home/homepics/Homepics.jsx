@@ -13,18 +13,18 @@ function Homepics() {
             Upgrade to premium speakers that are phenomenally built to deliver
             truly remarkable sound.
           </p>
-          <button className="seep blb">
-            <NavLink to="/headphones/zx9-speaker">see product</NavLink>
-          </button>
+          <NavLink to="/headphones/zx9-speaker">
+            <button className="seep blb">see product</button>
+          </NavLink>
         </div>
       </div>
 
       <div className="hdiv2">
         <div>
           <h2>ZX7 SPEAKER</h2>
-          <button className="seep trb">
-            <NavLink to="/headphones/zx7-speaker">see product</NavLink>
-          </button>
+          <NavLink to="/headphones/zx7-speaker">
+            <button className="seep trb">see product</button>
+          </NavLink>
         </div>
       </div>
 
@@ -32,9 +32,9 @@ function Homepics() {
         <div className="im"></div>
         <div className="hdiv3d">
           <h2>YX1 EARPHONES</h2>
-          <button className="seep trb">
-            <NavLink to="/headphones/yx1-earphones">see product</NavLink>
-          </button>
+          <NavLink to="/headphones/yx1-earphones">
+            <button className="seep trb">see product</button>
+          </NavLink>
         </div>
       </div>
     </div>

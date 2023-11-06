@@ -84,10 +84,11 @@ color: #000;
 .seep.trb:hover{
     background: #000;
     cursor:pointer;
+    color: #fff;
 }
-.seep.trb:hover a{
+/* .seep.trb:hover a{
     color:#fff;
-}
+} */
 
 .hdiv2 {
     width: 100%;

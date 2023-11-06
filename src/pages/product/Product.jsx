@@ -16,28 +16,6 @@ function Product() {
 
   const p = data.find((el) => el.slug === product);
 
-  // const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     setWindowWidth(window.innerWidth);
-  //   };
-
-  //   window.addEventListener("resize", handleResize);
-
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //   };
-  // }, []);
-  // let imageSrcKey = "desktop";
-
-  // if (windowWidth <= 768) {
-  //   imageSrcKey = "tablet";
-  // }
-  // if (windowWidth <= 476) {
-  //   imageSrcKey = "mobile";
-  // }
-
   return (
     <div className="product cat-content">
       <p onClick={() => navigate(-1)} className="goback preview">
@@ -47,7 +25,7 @@ function Product() {
       <Features p={p} />
       <Gallery p={p} imageSrcKey={imageSrcKey} />
 
-      <Others items={p.others} imageSrcKey={imageSrcKey} />
+      <Others items={p.others} />
       <ThreeCat />
     </div>
   );

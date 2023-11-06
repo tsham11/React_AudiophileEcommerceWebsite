@@ -8,7 +8,9 @@ export const MyContext = createContext();
 
 const MyProvider = ({ children }) => {
   const [cartList, setcartList] = useState([]);
+  const [count, setcount] = useState(0);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -31,7 +33,9 @@ const MyProvider = ({ children }) => {
   }
 
   return (
-    <MyContext.Provider value={{ cartList, setcartList, imageSrcKey }}>
+    <MyContext.Provider
+      value={{ cartList, setcartList, imageSrcKey, count, setcount }}
+    >
       {children}
     </MyContext.Provider>
   );

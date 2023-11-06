@@ -12,6 +12,9 @@
         text-align:left;
         /* align-self:left; */
 }
+.goback:hover{
+    cursor: pointer;
+}
 .product{
     padding-top:0;
     

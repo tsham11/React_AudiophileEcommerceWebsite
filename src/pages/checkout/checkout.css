@@ -133,7 +133,7 @@ input[type="radio"] {
 
 .summary {
   width: 32%;
-  height: 436px;
+  height:fit-content;
   border-radius: 8px;
   padding: 32px 33px;
   background-color: #FFF;

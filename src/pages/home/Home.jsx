@@ -17,11 +17,9 @@ function Home() {
             Experience natural, lifelike audio and exceptional build quality
             made for the passionate music enthusiast.
           </p>
-          <button>
-            <NavLink to="/headphones/xx99-mark-two-headphones">
-              See Product
-            </NavLink>
-          </button>
+          <NavLink to="/headphones/xx99-mark-two-headphones">
+            <button>See Product</button>{" "}
+          </NavLink>
         </div>
       </div>
       <ThreeCat />

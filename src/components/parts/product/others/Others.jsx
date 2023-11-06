@@ -1,11 +1,11 @@
-import React from "react";
+import { useContext } from "react";
+import { MyContext } from "../../../../layouts/RootLayout";
 import "./others.css";
 import data from "../../../../data.json";
 import { NavLink } from "react-router-dom";
 
-import im from "/shared/desktop/image-xx99-mark-one-headphones.jpg";
-
-function Others({ items, imageSrcKey }) {
+function Others({ items }) {
+  const { imageSrcKey, setcount } = useContext(MyContext);
   const cats = [];
   for (let i = 0; i < items.length; i++) {
     cats[i] = data.find((el) => el.slug === items[i].slug).category;
@@ -20,25 +20,25 @@ function Others({ items, imageSrcKey }) {
         <div className="o o1">
           <img src={it1.image[imageSrcKey]} alt="others" />
           <h3>{it1.name}</h3>
-          <button>
-            <NavLink to={`/${cats[0]}/${it1.slug}`}>See Product</NavLink>
-          </button>
+          <NavLink to={`/${cats[0]}/${it1.slug}`} onClick={() => setcount(0)}>
+            <button>See Product</button>
+          </NavLink>
         </div>
 
         <div className="o o2">
           <img src={it2.image[imageSrcKey]} alt="others" />
           <h3>{it2.name}</h3>
-          <button>
-            <NavLink to={`/${cats[1]}/${it2.slug}`}>See Product</NavLink>
-          </button>
+          <NavLink to={`/${cats[1]}/${it2.slug}`} onClick={() => setcount(0)}>
+            <button>See Product</button>
+          </NavLink>
         </div>
 
         <div className="o o3">
           <img src={it3.image[imageSrcKey]} alt="others" />
           <h3>{it3.name}</h3>
-          <button>
-            <NavLink to={`/${cats[2]}/${it3.slug}`}>See Product</NavLink>
-          </button>
+          <NavLink to={`/${cats[2]}/${it3.slug}`} onClick={() => setcount(0)}>
+            <button>See Product</button>
+          </NavLink>
         </div>
       </div>
     </div>

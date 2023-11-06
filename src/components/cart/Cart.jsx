@@ -3,7 +3,6 @@ import { MyContext } from "../../layouts/RootLayout";
 import "./cart.css";
 
 import { NavLink } from "react-router-dom";
-import cartIt from "../../assets/cart/image-zx7-speaker.jpg";
 
 function Cart({ showcart, setshowcart }) {
   const { cartList, setcartList } = useContext(MyContext);
@@ -36,14 +35,15 @@ function Cart({ showcart, setshowcart }) {
       <div className="cart-comp">
         <div className="cart-header">
           <h3>Cart ({cartList.length})</h3>
-          <h4 onClick={() => setcartList([])}>Remove All</h4>
+          <h4 onClick={() => setcartList([])} style={{ cursor: "pointer" }}>
+            Remove All
+          </h4>
         </div>
 
         <div className="cart-list">
           {cartList.map((el, indx) => (
             <div className="cart-item" key={`${el.name}`}>
-              {/* {settotal(total + el.price)} */}
-              <img src={cartIt} alt="cref" />
+              <img src={el.image.mobile} alt="cref" />
               <div className="dp">
                 <span className="dp-t">{el.shortName}</span>
                 <span className="dp-p">${el.price}</span>
@@ -65,10 +65,14 @@ function Cart({ showcart, setshowcart }) {
           <span className="ttl-text">total</span>
           <span className="total-price">${total}</span>
         </div>
-
-        <button className="check-button" onClick={() => setshowcart(!showcart)}>
-          <NavLink to="/checkout">checkout</NavLink>
-        </button>
+        <NavLink to="/checkout">
+          <button
+            className="check-button"
+            onClick={() => setshowcart(!showcart)}
+          >
+            checkout
+          </button>
+        </NavLink>
       </div>
     </div>
   );
