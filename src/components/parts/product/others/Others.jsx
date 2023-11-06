@@ -1,18 +1,20 @@
 import { useContext } from "react";
 import { MyContext } from "../../../../layouts/RootLayout";
-import "./others.css";
-import data from "../../../../data.json";
 import { NavLink } from "react-router-dom";
+import data from "../../../../data.json";
+import "./others.css";
 
 function Others({ items }) {
   const { imageSrcKey, setcount } = useContext(MyContext);
   const cats = [];
+
   for (let i = 0; i < items.length; i++) {
     cats[i] = data.find((el) => el.slug === items[i].slug).category;
   }
   const it1 = items[0];
   const it2 = items[1];
   const it3 = items[2];
+
   return (
     <div className="otherswrap mainwrap">
       <h1>you may also like</h1>

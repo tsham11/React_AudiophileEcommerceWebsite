@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { MyContext } from "../../../../layouts/RootLayout";
 import "./Singlep.css";
 
@@ -6,11 +6,9 @@ function Singlep({ p }) {
   const { cartList, setcartList, imageSrcKey, count, setcount } =
     useContext(MyContext);
 
-  //const [count, setcount] = useState(0);
-
   useEffect(() => {
     setcount(0);
-  }, []);
+  }, [setcount]);
 
   function addToCart() {
     let temp = p;
@@ -18,6 +16,7 @@ function Singlep({ p }) {
     setcartList([...cartList, temp]);
     setcount(0);
   }
+
   return (
     <div className="preview mainwrap">
       <img src={p.image[imageSrcKey]} alt="product" className="productim" />

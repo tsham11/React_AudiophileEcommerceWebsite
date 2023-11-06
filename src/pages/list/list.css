@@ -26,7 +26,7 @@
 .product-list {
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
   gap: 160px;
 }
 
@@ -66,7 +66,7 @@
   letter-spacing: 10px;
   text-transform: uppercase;
   margin-bottom: 16px;
-  opacity:1;
+  opacity: 1;
 }
 
 .title {
@@ -92,10 +92,6 @@
 }
 
 @media (max-width:1150px) {
-  /* .preview {
-    width: 100%;
-  } */
-
   .np {
     margin-bottom: 10px;
   }
@@ -168,7 +164,6 @@
   }
 
   .cat-content {
-    /* padding: 161px 39px 0; */
     margin-bottom: 120px;
   }
 

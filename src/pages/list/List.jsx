@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { MyContext } from "../../layouts/RootLayout";
 import { Outlet, useOutletContext, NavLink } from "react-router-dom";
-import "./list.css";
 import ThreeCat from "../../components/parts/home/threecat/ThreeCat";
 import Audioman from "../../components/parts/home/audioman/Audioman";
 import productData from "../../../src/data.json";
+import "./list.css";
 
 function List() {
   const pathname = window.location.pathname;

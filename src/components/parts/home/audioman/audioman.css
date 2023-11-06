@@ -23,7 +23,6 @@
   font-size: 40px;
   font-weight: 700;
   line-height: 44px;
-  /* 110% */
   letter-spacing: 1.429px;
   text-transform: uppercase;
 }
@@ -39,7 +38,6 @@
   line-height: 25px;
   opacity: 0.5;
   padding-top: 32px;
-
 }
 
 @media (max-width:1200px) {
@@ -73,19 +71,16 @@
     max-width: 573px;
     text-align: center;
     order: 2;
-    padding-left:15px;
-    padding-right:15px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
-
 }
 
 
 
 @media (max-width:375px) {
-
   .audman {
     background-image: url('../../../../assets/shared/mobile/image-best-gear.jpg');
-
   }
 
   .audiotext {
@@ -93,10 +88,8 @@
   }
 
   .audiotext h1 {
-
     font-size: 28px;
     font-weight: 700;
     letter-spacing: 1px;
   }
-
 }

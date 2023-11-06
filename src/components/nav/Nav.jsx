@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/shared/desktop/logo.svg";
 import cart from "../../assets/shared/desktop/icon-cart.svg";
@@ -14,9 +14,11 @@ function Nav() {
   function showmenu() {
     menuref.current.classList.remove("hide");
   }
+
   function hidemenu() {
     menuref.current.classList.add("hide");
   }
+
   return (
     <div className="nav">
       <div className="inner">
@@ -29,9 +31,7 @@ function Nav() {
           </span>
         </div>
         <span className="linkwrap hide" ref={menuref}>
-          {/* <span className="close"> */}
           <img src={close} className="close" onClick={() => hidemenu()} />
-          {/* </span> */}
           <div className="links">
             <NavLink className="link" to="home" onClick={() => hidemenu()}>
               Home

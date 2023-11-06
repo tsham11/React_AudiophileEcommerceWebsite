@@ -1,9 +1,7 @@
-// import React, { createContext } from "react";
-
+import { NavLink } from "react-router-dom";
 import ThreeCat from "../../components/parts/home/threecat/ThreeCat";
 import Audioman from "../../components/parts/home/audioman/Audioman";
 import Homepics from "../../components/parts/home/homepics/Homepics.jsx";
-import { NavLink } from "react-router-dom";
 import "./Home.css";
 
 function Home() {
@@ -18,7 +16,7 @@ function Home() {
             made for the passionate music enthusiast.
           </p>
           <NavLink to="/headphones/xx99-mark-two-headphones">
-            <button>See Product</button>{" "}
+            <button>See Product</button>
           </NavLink>
         </div>
       </div>

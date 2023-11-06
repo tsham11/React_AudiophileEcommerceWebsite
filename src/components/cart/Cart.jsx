@@ -1,8 +1,7 @@
 import { useContext, useState, useEffect } from "react";
 import { MyContext } from "../../layouts/RootLayout";
-import "./cart.css";
-
 import { NavLink } from "react-router-dom";
+import "./cart.css";
 
 function Cart({ showcart, setshowcart }) {
   const { cartList, setcartList } = useContext(MyContext);
@@ -14,20 +13,20 @@ function Cart({ showcart, setshowcart }) {
 
   const handleDecrement = (index) => {
     if (cartList[index].count > 0) {
-      const updCart = [...cartList]; // Create a copy of the cartList
-      updCart[index].count -= 1; // Update the count of the specific item
+      const updCart = [...cartList];
+      updCart[index].count -= 1;
       if (updCart[index].count === 0) {
         updCart.splice(index, 1);
         console.log(updCart);
       }
-      setcartList(updCart); // Update the state with the new array
+      setcartList(updCart);
     }
   };
 
   const handleIncrement = (index) => {
-    const updCart = [...cartList]; // Create a copy of the cartList
-    updCart[index].count += 1; // Update the count of the specific item
-    setcartList(updCart); // Update the state with the new array
+    const updCart = [...cartList];
+    updCart[index].count += 1;
+    setcartList(updCart);
   };
 
   return (
