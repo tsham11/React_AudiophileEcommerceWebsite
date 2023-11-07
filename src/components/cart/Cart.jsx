@@ -1,9 +1,9 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState, useEffect, useRef } from "react";
 import { MyContext } from "../../layouts/RootLayout";
 import { NavLink } from "react-router-dom";
 import "./cart.css";
 
-function Cart({ showcart, setshowcart }) {
+function Cart({ isModalOpen, setIsModalOpen, modalRef }) {
   const { cartList, setcartList } = useContext(MyContext);
   const [total, settotal] = useState(0);
   useEffect(() => {
@@ -31,14 +31,13 @@ function Cart({ showcart, setshowcart }) {
 
   return (
     <div className="bg">
-      <div className="cart-comp">
+      <div className="cart-comp" ref={modalRef}>
         <div className="cart-header">
           <h3>Cart ({cartList.length})</h3>
           <h4 onClick={() => setcartList([])} style={{ cursor: "pointer" }}>
             Remove All
           </h4>
         </div>
-
         <div className="cart-list">
           {cartList.map((el, indx) => (
             <div className="cart-item" key={`${el.name}`}>
@@ -59,19 +58,22 @@ function Cart({ showcart, setshowcart }) {
             </div>
           ))}
         </div>
-
         <div className="total">
           <span className="ttl-text">total</span>
           <span className="total-price">${total}</span>
         </div>
-        <NavLink to="/checkout">
-          <button
-            className="check-button"
-            onClick={() => setshowcart(!showcart)}
-          >
-            checkout
-          </button>
-        </NavLink>
+        {cartList.length > 0 ? (
+          <NavLink to="/checkout">
+            <button
+              className="check-button"
+              onClick={() => setIsModalOpen(!isModalOpen)}
+            >
+              checkout
+            </button>
+          </NavLink>
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );

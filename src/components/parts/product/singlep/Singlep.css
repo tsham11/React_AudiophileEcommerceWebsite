@@ -32,6 +32,7 @@
 .sign {
     opacity: 0.4;
     font-size: 16px;
+    padding: 0px 8px;
 }
 
 .sign:hover {

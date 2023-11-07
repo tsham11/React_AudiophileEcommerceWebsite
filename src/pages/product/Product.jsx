@@ -18,8 +18,8 @@ function Product() {
 
   return (
     <div className="product cat-content">
-      <p onClick={() => navigate(-1)} className="goback preview">
-        go back
+      <p onClick={() => navigate(-1)} className="goback preview mainwrap">
+        Go Back
       </p>
       <Singlep p={p} />
       <Features p={p} />

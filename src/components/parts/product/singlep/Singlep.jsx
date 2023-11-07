@@ -11,9 +11,15 @@ function Singlep({ p }) {
   }, [setcount]);
 
   function addToCart() {
-    let temp = p;
-    temp.count = count;
-    setcartList([...cartList, temp]);
+    if (count <= 0) return;
+    let temp = cartList;
+    let item = p;
+    item.count = item.count ? item.count + count : count;
+    const ind = temp.findIndex((el) => el.id === p.id);
+    console.log(ind);
+    if (ind >= 0) temp[ind] = item;
+    else temp.push(item);
+    setcartList(temp);
     setcount(0);
   }
 

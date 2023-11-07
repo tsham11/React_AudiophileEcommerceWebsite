@@ -231,7 +231,7 @@ function Checkout() {
                       e-Money Number
                       <input
                         type="text"
-                        placeholder="Your e-money number"
+                        placeholder="238521993"
                         {...field}
                         maxLength={9}
                       />
@@ -253,7 +253,7 @@ function Checkout() {
                       e-Money PIN
                       <input
                         type="text"
-                        placeholder="Your e-Money Pin"
+                        placeholder="6891"
                         {...field}
                         maxLength={4}
                       />

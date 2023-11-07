@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/shared/desktop/logo.svg";
 import cart from "../../assets/shared/desktop/icon-cart.svg";
@@ -18,6 +18,48 @@ function Nav() {
   function hidemenu() {
     menuref.current.classList.add("hide");
   }
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const modalRef = useRef();
+  // function useOnClickOutside(ref, handler) {
+  //   useEffect(
+  //     () => {
+  //       const listener = (event) => {
+  //         // Do nothing if clicking ref's element or descendent elements
+  //         if (!ref.current || ref.current.contains(event.target)) {
+  //           return;
+  //         }
+  //         handler(event);
+  //       };
+  //       document.addEventListener("mousedown", listener);
+  //       document.addEventListener("touchstart", listener);
+  //       return () => {
+  //         document.removeEventListener("mousedown", listener);
+  //         document.removeEventListener("touchstart", listener);
+  //       };
+  //     },
+
+  //     [ref, handler]
+  //   );
+  // }
+  // useOnClickOutside(modalRef, () => setIsModalOpen(false));
+  useEffect(() => {
+    // Define a function to close the modal
+    console.log("not ours" + modalRef.current);
+
+    const listener = (e) => {
+      if (!modalRef.current || modalRef.current.contains(e.target)) {
+        return;
+      }
+      setIsModalOpen(false);
+    };
+    document.addEventListener("mousedown", listener);
+    document.addEventListener("touchstart", listener);
+    return () => {
+      document.removeEventListener("mousedown", listener);
+      document.removeEventListener("touchstart", listener);
+    };
+  }, []);
 
   return (
     <div className="nav">
@@ -55,12 +97,14 @@ function Nav() {
           <img
             src={cart}
             className="cart"
-            onClick={() => setshowcart(!showcart)}
+            onClick={() => setIsModalOpen(!isModalOpen)}
           />
-          {showcart ? (
-            <Cart showcart={showcart} setshowcart={setshowcart} />
-          ) : (
-            <></>
+          {isModalOpen && (
+            <Cart
+              isModalOpen={isModalOpen}
+              setIsModalOpen={setIsModalOpen}
+              modalRef={modalRef}
+            />
           )}
         </span>
       </div>
