@@ -1,6 +1,5 @@
-import React from "react";
-import "./Homepics.css";
 import { NavLink } from "react-router-dom";
+import "./Homepics.css";
 
 function Homepics() {
   return (

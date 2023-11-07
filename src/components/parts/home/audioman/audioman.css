@@ -3,7 +3,6 @@
   gap: 13%;
   margin: 0 auto 160px;
   align-items: center;
-  /* width: 1110px; */
 }
 
 .audman {
@@ -24,7 +23,6 @@
   font-size: 40px;
   font-weight: 700;
   line-height: 44px;
-  /* 110% */
   letter-spacing: 1.429px;
   text-transform: uppercase;
 }
@@ -40,12 +38,10 @@
   line-height: 25px;
   opacity: 0.5;
   padding-top: 32px;
-
 }
 
 @media (max-width:1200px) {
   .audiodiv {
-    /* width: 100%; */
     gap: 10%;
   }
 
@@ -59,7 +55,6 @@
     flex-direction: column;
     gap: 63px;
     margin: 0 auto 120px;
-    /* width: 689px; */
   }
 
   .audman {
@@ -76,26 +71,16 @@
     max-width: 573px;
     text-align: center;
     order: 2;
-    padding-left:15px;
-    padding-right:15px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
-
 }
 
-/* @media (max-width:689px) {
-  .audiodiv {
-    width: 100%;
-  }
-} */
+
 
 @media (max-width:375px) {
-  /* .audiodiv {
-    width: 327px;
-  } */
-
   .audman {
     background-image: url('../../../../assets/shared/mobile/image-best-gear.jpg');
-
   }
 
   .audiotext {
@@ -103,10 +88,8 @@
   }
 
   .audiotext h1 {
-
     font-size: 28px;
     font-weight: 700;
     letter-spacing: 1px;
   }
-
 }

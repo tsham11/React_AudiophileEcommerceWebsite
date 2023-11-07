@@ -23,7 +23,6 @@
     font-size: 13px;
     font-weight: 700;
     line-height: 25px;
-
     letter-spacing: 2px;
     text-transform: uppercase;
 }
@@ -44,14 +43,12 @@
 @media (max-width:880px) {
     .nav {
         padding: 0 50px;
-
     }
 }
 
 @media (max-width:768px) {
     .nav {
         padding: 0 39px;
-
     }
 }
 
@@ -69,7 +66,6 @@
 
     .inner {
         height: 89px;
-
     }
 
     .links {
@@ -101,13 +97,11 @@
         right: 20px;
         padding-bottom: 30px;
     }
-
-
 }
+
 @media (max-width:475px) {
     .nav {
         padding: 0 24px;
-
     }
 }
 

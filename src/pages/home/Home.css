@@ -1,12 +1,13 @@
-
-.home,.headdiv{
-    display:flex;
+.home,
+.headdiv {
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
-.homehead{
-    height:632px;
-    width:100%;
+
+.homehead {
+    height: 632px;
+    width: 100%;
     background-image: url("../../assets/home/desktop/image-hero.jpg");
     background-repeat: no-repeat;
     background-position: bottom center;
@@ -18,7 +19,7 @@
 .headdiv {
     width: 396px;
     height: 360px;
-    text-align:left;
+    text-align: left;
 }
 
 .homenewp {
@@ -49,7 +50,7 @@
     padding-bottom: 40px;
 }
 
-button{
+button {
     width: 160px;
     height: 48px;
     background: #D87D4A;
@@ -66,52 +67,8 @@ button:hover {
     cursor: pointer;
 }
 
-@media (max-width:768px){
-.homehead {
-        height: 639px;
-        background-image: url("../../assets/home/tablet/image-header.jpg");
-        background-size: cover;
-        padding-top: 126px;
-        padding-left: 0px;
-    }
-
-    .headdiv {
-        margin:0 auto;
-        width: 379px;
-            height: 346px;
-        text-align: center;
-    }
-    .homedesc{
-        width: 349px;
-    }
-
-}
-@media (max-width:468px) {
-
-    
-        .headdiv h1 {
-            font-size: 36px;
-                line-height: 40px;
-                /* 111.111% */
-                letter-spacing: 1.286px;
-        }
-    
-        .homedesc {
-            width: 328px;
-        }
-}
-
-@media (max-width:375px) {
-    .homehead {
-        height: 510px;
-        background-image: url("../../assets/home/mobile/image-header.jpg");
-        padding-top: 108px;
-    }
-}
-
-
-.mainwrap{
-    width:1110px;
+.mainwrap {
+    width: 1110px;
 }
 
 @media (max-width:1200px) {
@@ -120,7 +77,46 @@ button:hover {
     }
 }
 
+@media (max-width:768px) {
+    .homehead {
+        height: 639px;
+        background-image: url("../../assets/home/tablet/image-header.jpg");
+        background-size: cover;
+        padding-top: 126px;
+        padding-left: 0px;
+    }
+
+    .headdiv {
+        margin: 0 auto;
+        width: 379px;
+        height: 346px;
+        text-align: center;
+    }
+
+    .homedesc {
+        width: 349px;
+    }
+}
+
+@media (max-width:468px) {
+    .headdiv h1 {
+        font-size: 36px;
+        line-height: 40px;
+        letter-spacing: 1.286px;
+    }
+
+    .homedesc {
+        width: 328px;
+    }
+}
+
 @media (max-width:375px) {
+    .homehead {
+        height: 510px;
+        background-image: url("../../assets/home/mobile/image-header.jpg");
+        padding-top: 108px;
+    }
+
     .mainwrap {
         width: 327px;
     }

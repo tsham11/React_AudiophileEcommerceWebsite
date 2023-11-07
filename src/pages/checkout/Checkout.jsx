@@ -1,7 +1,8 @@
 import { useContext, useState, useEffect } from "react";
 import { MyContext } from "../../layouts/RootLayout";
-import "./checkout.css";
 import { useForm, Controller } from "react-hook-form";
+import Final from "../../components/final/Final";
+import "./checkout.css";
 
 function Checkout() {
   const { cartList } = useContext(MyContext);
@@ -9,23 +10,26 @@ function Checkout() {
   const { errors } = formState;
   const [selectedPayment, setSelectedPayment] = useState("e-money");
   const [summ, setsumm] = useState([0, 0, 0, 0]);
+  const [showFinal, setShowFinal] = useState(false);
+
   useEffect(() => {
     let t = cartList.reduce((tot, c) => tot + c.price * c.count, 0);
     const vat = Math.round((t * 15) / 100);
     t += vat;
     const sh = Math.round(t / 100);
     setsumm([t, sh, vat, t + sh]);
-  }, []);
+  }, [cartList]);
+
   const onSubmit = () => {
-    alert("form submitted");
+    setShowFinal(!showFinal);
   };
 
   return (
     <div className="Checkout">
       <div className="check">
-        <h1>Checkout</h1>
+        <h1 id="h1">Checkout</h1>
 
-        <form id="my-form" onSubmit={handleSubmit(onSubmit)} className="form">
+        <form id="my-form" className="form">
           <h3>Billing Details</h3>
           <div className="billing">
             <div className="err">
@@ -227,7 +231,7 @@ function Checkout() {
                       e-Money Number
                       <input
                         type="text"
-                        placeholder="Your e-money number"
+                        placeholder="238521993"
                         {...field}
                         maxLength={9}
                       />
@@ -249,7 +253,7 @@ function Checkout() {
                       e-Money PIN
                       <input
                         type="text"
-                        placeholder="Your e-Money Pin"
+                        placeholder="6891"
                         {...field}
                         maxLength={4}
                       />
@@ -304,10 +308,16 @@ function Checkout() {
           </span>
         </div>
 
-        <button form="my-form" className="pay">
+        <button form="my-form" className="pay" onClick={handleSubmit(onSubmit)}>
           Continue & pay
         </button>
       </div>
+
+      {showFinal && (
+        <div className="bg">
+          <Final gt={summ[3]} cartList={cartList} />
+        </div>
+      )}
     </div>
   );
 }

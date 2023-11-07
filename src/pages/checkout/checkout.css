@@ -10,14 +10,14 @@
   width: 66%;
   min-height: 997px;
   border-radius: 8px;
-  background-color: #FFF;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   padding: 48px;
   text-align: start;
 }
 
-.check h1 {
+#h1 {
   font-size: 32px;
   font-weight: 700;
   line-height: 36px;
@@ -30,7 +30,7 @@
 }
 
 .form h3 {
-  color: #D87D4A;
+  color: #d87d4a;
   font-size: 13px;
   font-weight: 700;
   line-height: 25px;
@@ -55,10 +55,10 @@ input {
   width: 100%;
   height: 56px;
   border-radius: 8px;
-  border: 1px solid #CFCFCF;
-  background: #FFF;
+  border: 1px solid #cfcfcf;
+  background: #fff;
   color: rgba(0, 0, 0, 1);
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
   font-weight: 700;
   padding-left: 24px;
 }
@@ -66,7 +66,7 @@ input {
 ::placeholder {
   color: #000;
   opacity: 0.4;
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: -0.25px;
@@ -112,7 +112,7 @@ input {
   align-items: center;
   gap: 16px;
   border-radius: 8px;
-  border: 1px solid #CFCFCF;
+  border: 1px solid #cfcfcf;
 }
 
 input[type="radio"] {
@@ -133,10 +133,10 @@ input[type="radio"] {
 
 .summary {
   width: 32%;
-  height:fit-content;
+  height: fit-content;
   border-radius: 8px;
   padding: 32px 33px;
-  background-color: #FFF;
+  background-color: #fff;
   text-align: start;
 }
 
@@ -159,12 +159,12 @@ input[type="radio"] {
 }
 
 #tp {
-  color: #D87D4A;
+  color: #d87d4a;
 }
 
 .pay {
   width: 100%;
-  color: #FFF;
+  color: #fff;
   margin-top: 32px;
   font-size: 13px;
   font-weight: 700;
@@ -186,4 +186,49 @@ input[type="radio"] {
 
 .address {
   width: 100%;
+}
+@media (max-width: 1050px) {
+  .Checkout {
+    padding: 79px 50px 141px;
+  }
+  .check {
+    width: 56%;
+  }
+  .summary {
+    width: 42%;
+  }
+  .err{
+    width:100%;
+  }
+    .e-money .err {
+      width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+  .Checkout {
+    padding: 79px 40px 141px;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .check,
+  .summary {
+    width: 100%;
+  }
+}
+@media (max-width:550px){
+  .details,.e-money{
+    flex-direction: column;
+    gap:10px;
+  }
+    .e-money .err,.options {
+      width: 100%;
+    }
+    .details{
+      margin-bottom:32px;
+    }
+    .details h4{
+      padding-bottom:10px;
+    }
 }

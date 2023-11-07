@@ -5,7 +5,7 @@ function Features({ p }) {
     <div className="features-box mainwrap">
       <div className="features">
         <h2>features</h2>
-        <p>{p.features}</p>
+        <p id="fp">{p.features}</p>
       </div>
       <div className="inbox">
         <h2>in the box</h2>
